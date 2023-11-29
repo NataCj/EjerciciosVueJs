@@ -1,5 +1,10 @@
 <script setup>
 import TaskComponent from '@/components/TaskComponent.vue';
+
+import{ref} from 'vue';
+let tareas = ref([
+'Comer', 'dormir', 'dormir'   
+])  
 </script>
 
 <template>
@@ -14,8 +19,12 @@ import TaskComponent from '@/components/TaskComponent.vue';
   </div>
 
   
-<TaskComponent/>
-<TaskComponent/>
+<TaskComponent v-for="(tarea, index) in tareas"
+:key="index"
+:tarea = "tarea"
+:index = "index"
+/>
+
 
 
 </div>

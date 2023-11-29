@@ -1,4 +1,16 @@
 <script setup>
+const props = defineProps(
+    {
+        tarea:{
+            type: String
+            default: 'Tarea por defecto'
+        },
+        index:{
+            type: Number
+            
+        }
+    }
+)
 </script>
 
 <template>
